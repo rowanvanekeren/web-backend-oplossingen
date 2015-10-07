@@ -28,12 +28,12 @@ $kolommen = 10;
     
     
     
-    <table border="1">
+    <table border="1" 
 			<?php for( $b = 0; $b < $rijen; ++$b ): ?>
 
 				<tr>
 				   <?php for( $i = 0; $i < $kolommen; ++$i ): ?>
-
+            
 				    <td>kolom</td>
 				    
 
