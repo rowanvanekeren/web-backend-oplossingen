@@ -1,52 +1,37 @@
 <?php
-	$md5HashKey 	= 	'd1fa402db91a7a93c4f414b8278ce073';
-	$needle1			=	"2";
-	$needle2			=	"8";
-	$needle3			=	"a";
 
-	function telKarakters1( $haystack, $needle )
-	{
-		$haystackCount =  strlen( $haystack );
+$md5HashKey = 'd1fa402db91a7a93c4f414b8278ce073';
+  
 
-		$needleAantal = substr_count ( $haystack, $needle );
 
-		$needleProcent = ( $needleAantal / $haystackCount ) * 100;
+function nummerEen($karakter,$string){
+    
+    $string_length = strlen($string);
+    $aant_char = substr_count($string,$karakter);
+     $percent =$aant_char / $string_length * 100;
+    return $percent;
+    
+    
+}
 
-		return $needleProcent;
-	}
+function nummerTwee($karakter){
+    global $md5HashKey;
+    $string_length = strlen($md5HashKey);
+   $aant_char =substr_count($md5HashKey,$karakter);
+     $percent =$aant_char / $string_length * 100;
+    return $percent;
+    
+}
 
-	function telKarakters2( $needle )
-	{
-		global $md5HashKey;
-
-		$haystack = $md5HashKey;
-
-		$haystackCount =  strlen( $haystack );
-
-		$needleAantal = substr_count ( $haystack, $needle );
-
-		$needleProcent = ( $needleAantal / $haystackCount ) * 100;
-
-		return $needleProcent;
-	}
-
-	function telKarakters3( $needle )
-	{
-		$haystack = $GLOBALS['md5HashKey'];
-
-		$haystackCount =  strlen( $haystack );
-
-		$needleAantal = substr_count ( $haystack, $needle );
-
-		$needleProcent = ( $needleAantal / $haystackCount ) * 100;
-
-		return $needleProcent;
-	}
-
-	$eersteMethode 	=	telKarakters1( $md5HashKey, $needle1 );
-	$tweedeMethode 	=	telKarakters2( $needle2 );
-	$derdeMethode 	=	telKarakters3( $needle3 );
-
+function nummerDrie($karakter){
+   $string = $GLOBALS['md5HashKey'];
+    $string_length = strlen($string); 
+    $aant_char =substr_count($string,$karakter);
+    
+    $percent =$aant_char / $string_length * 100;
+    return $percent;
+    
+}
 ?>
 
 <!doctype html>
@@ -58,7 +43,7 @@
     </head>
     <body>
 		
-    <p> <?php echo $eersteMethode . "  " . $tweedeMethode . "  " .  $derdeMethode   ?> </p>
+    <p><?php echo  nummerEen('2',$md5HashKey) . "en" . nummerTwee('8') . "en" . nummerDrie('a') ?> </p>
 
 		
     </body>
