@@ -1,0 +1,51 @@
+*{
+
+    font-family: arial;
+    color: white;
+
+
+
+}
+
+
+body{
+    
+ margin: 0 auto;   
+    width: 60%;
+}
+
+.klein {
+
+float:left;
+    width:25%;
+margin:5px;
+    background-color: grey;
+    margin-top: 20%;
+    
+}
+
+
+.groot{
+    
+    float:left;
+    width:100%;
+margin:5px;
+    background-color: grey;
+    margin-top: 20%;
+    
+    
+}
+
+div h1, p,img{
+
+
+text-align: center;
+
+}
+
+img{
+
+width:100%;
+
+
+}
