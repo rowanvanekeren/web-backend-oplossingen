@@ -40,7 +40,7 @@ if(isset($_POST["submit"])){
 
     </head>
     <body>
-        <<h1>Inloggen</h1>
+        <h1>Inloggen</h1>
        
         <p style="color:red"> <?php echo $error ?> </p>
         <form method="post">
