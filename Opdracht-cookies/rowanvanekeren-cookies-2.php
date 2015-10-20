@@ -18,7 +18,7 @@ if($_COOKIE["accept"]== "true")
 
     </head>
     <body>
-        <<h1><?php echo $message  ?></h1>
+        <h1><?php echo $message  ?></h1>
         <p><a href="rowanvanekeren-cookies.php?destroy=yes">uitloggen</a></p>
 
     <p> <?php      ?> </p>
