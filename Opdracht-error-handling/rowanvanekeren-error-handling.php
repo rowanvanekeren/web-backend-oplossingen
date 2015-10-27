@@ -2,32 +2,40 @@
 
 $message;
 $naam;
+
 	try
 	{
 		if ( isset ( $_POST['submit'] ) )
 		{
-			try
-			{
+			
 				if ( $_POST['text'] == '' )
 				{
-					throw new Exception( 'invulveld is leeg' );
+					throw new Exception( 'SUBMIT-ERROR' );
 				}
 				else
 				{
 					$naam	=	$_POST['text'];
 				}
-			}
-			catch( Exception $e )
-			{
-				throw new Exception( $e->getMessage() );
-			}
+			
+			
 			
 		}
 	}
 	catch ( Exception $e )
 	{
-	
-		$message['text']	=	$e->getMessage();
+	$messageCode = $e->getMessage();
+		$message;
+        $createMessage = false;
+        
+        switch($messageCode){
+            case 'SUBMIT-ERROR':
+                $message["type"] = "error";
+                $message["text"] = 
+                    "er werd met het formulier geknoeid";
+                break;
+            
+                
+        }
 
 	}
 
@@ -49,7 +57,7 @@ $naam;
 		<?php endif ?>
    <form method="post">
        
-       <input type="text" name="text" placeholder=<?php $naam ?>/>
+       <input type="text" name="text" placeholder=<?php $text ?>/>
        <input type="submit" name="submit" />
        
        
