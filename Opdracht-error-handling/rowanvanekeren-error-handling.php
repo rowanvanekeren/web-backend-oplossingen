@@ -49,7 +49,7 @@ $naam;
 		<?php endif ?>
    <form method="post">
        
-       <input type="text" name="text" placeholder=<?php $text ?>/>
+       <input type="text" name="text" placeholder=<?php $naam ?>/>
        <input type="submit" name="submit" />
        
        
