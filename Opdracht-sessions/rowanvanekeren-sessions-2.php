@@ -13,7 +13,7 @@ if(isset($_POST["submit"])){
     header("location:rowanvanekeren-sessions-3.php");
     
 }
-
+/* moet in isset["submit"] */
 if(isset($_POST["straat"])){
 $_SESSION["straat"] = $_POST["straat"];
 $_SESSION['nummer'] = $_POST["nummer"];
