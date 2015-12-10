@@ -92,7 +92,7 @@ session_start();
    			
    			
    			
-   			<form> 
+   			<form method="post"> 
    			
    			<input type="text" name="brnaam" value="brnaam" /><br/><br/>
    			<input type="text" name="adres" value="adres" /><br/><br/>
