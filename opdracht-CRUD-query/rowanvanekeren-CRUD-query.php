@@ -38,7 +38,7 @@
 			$columnNames[0]	=	$key;
 		}
         
-            echo var_dump($fetchRow);
+           var_dump($fetchRow);
 
      
     }
