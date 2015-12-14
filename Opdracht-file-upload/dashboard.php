@@ -7,7 +7,7 @@ $bool = false;
                       $explode = explode("##",$_COOKIE["login"] );
                 
                       
-            $dblog = new PDO('mysql:host=localhost;dbname=opdracht-security-login','root','');
+            $dblog = new PDO('mysql:host=localhost;dbname=opdracht-file-upload','root','');
           
              
             $queryStringlog = 'SELECT email, salt, hashed_password FROM users where email like :email';
@@ -52,6 +52,9 @@ $statementlog = $dblog->prepare($queryStringlog);
 <body>
    <?php if ($bool == true): ?> <h1>Dashboard</h1><br/>
     
-    <a href="dashboard.php?cookie=destroy">Uitloggen</a><?php endif ?>
+    <a href="dashboard.php?cookie=destroy">Uitloggen</a>
+     <a href="gegevens-wijzigen-form.php">Gegevens wijzigen</a>
+    
+    <?php endif ?>
 </body>
 </html>
