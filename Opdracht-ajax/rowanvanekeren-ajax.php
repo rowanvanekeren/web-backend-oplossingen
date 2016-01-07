@@ -9,12 +9,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <title>ajax</title>
 </head>
 <body>
-                        <form method="post" action="contact.php">
+                        <form id="target" method="post" action="contact.php" >
                             <ul>
                                 <li>
                                     <label for="email">E-mailadres</label>
@@ -31,6 +34,39 @@
                             </ul>
                             <input type="submit" name="submit">
                         </form>
+                        <div class="placeholder"> </div>
+                        
+                        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+                        <script> 
+$(function(){
+$("#target").submit(function(){
+    var formData = $('#target').serialize();
+    console.log('formData:' + formData);
+   
+    $.ajax({
+      type: "post",
+       url:  "contact-api.php",
+       data: formData,
+       success: function(data){
+           console.log (data);
+           	parsedData	=	JSON.parse(data);
+           
+           console.log(parsedData[0])
+           $('.placeholder').append('<p>' +       parsedData['status'] + '</p>');
+           
+       }
+   });
+    return false;
+    
+    
+});
+
+
+
+});
+
+
+</script>
   
 </body>
 </html>
