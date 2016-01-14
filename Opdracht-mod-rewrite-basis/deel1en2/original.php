@@ -24,5 +24,6 @@
 </head>
 <body>
  <h1>original</h1>
+ <h1><?php var_dump($_GET) ?></h1>
 </body>
 </html>
