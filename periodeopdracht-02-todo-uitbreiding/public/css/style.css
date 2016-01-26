@@ -1,0 +1,76 @@
+*{
+    font-family: arial;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
+
+#logreg {
+     text-align: right;
+     float: left;
+     
+     width:60%;
+}
+#home {
+     text-align: left;
+     float: left;
+      
+      width:20%;
+    
+}
+a {
+    text-decoration: none;
+    
+    color: black;
+}
+#logreg li {
+ 
+    display: inline-block;
+   list-style: none;
+   
+}
+
+#home li {
+  
+    display: inline-block;
+   
+}
+
+.container {
+    margin: 0 auto;
+    background-color:  slategrey;
+   display: inline-block;
+    padding: 20px;
+    width: 100%;
+  
+}
+
+li {
+    list-style:  none;
+}
+
+.notdone a:hover {
+    text-decoration: line-through;
+}
+
+.done a {
+    text-decoration: line-through;
+}
+
+
+.done a:hover {
+    
+    text-decoration: none;
+}
+
